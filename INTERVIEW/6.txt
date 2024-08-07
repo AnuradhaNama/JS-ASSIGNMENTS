@@ -1,0 +1,19 @@
+6. How do you pass props to a React component?
+
+A. Passing props to a React component allows you to pass data from a parent component to a child component. 
+This is one of the primary mechanisms for managing and sharing state and data in a React application.
+
+* Steps to Pass Props to a React Component:
+1. Define Props in Parent Component: When you render the child component in the parent component,
+ you can pass data to the child component via attributes.
+2. Access Props in Child Component: The child component can access the passed props via the props object.
+* Passing Multiple Props:
+You can pass multiple props to a component by adding more attributes.
+* Using Destructuring:
+You can use JavaScript destructuring to simplify access to props in the child component.
+* Default Props:
+You can define default values for props in case they are not provided by the parent component.
+* Prop Types:
+You can use the prop-types library to specify the expected types of props and whether they are required.
+> By following these steps, you can effectively pass and manage props in your React components, 
+allowing for flexible and reusable component design.

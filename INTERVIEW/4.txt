@@ -1,0 +1,29 @@
+4. How do you handle state changes in a React component?
+
+A. Handling state changes in a React component involves using state management mechanisms provided by React. 
+The approach differs between functional and class components.
+* Functional Components:
+For functional components, React provides the useState hook to manage state.
+
+* Using "useState" Hook:
+1. Import useState: First, you need to import the useState hook from React.
+2. Initialize State: Use useState to initialize state with a default value.
+3. Update State: Use the state setter function to update the state.
+
+* Class Components:
+For class components, state is managed using this.state and this.setState.
+
+* Using "this.state" and "this.setState":
+1. Initialize State: State is initialized in the constructor.
+2. Update State: Use this.setState to update the state.
+
+* Key Points:
+
+* State is Immutable: Never mutate the state directly. Always use useState or this.setState.
+* Batch Updates: React may batch state updates for performance reasons, so relying on the previous state to calculate the new state is a common pattern.
+* Multiple State Variables: In functional components, you can use multiple useState hooks to manage different pieces of state.
+* State in Class Components: All state variables are typically managed within a single this.state object.
+
+* Handling Complex State:
+For more complex state logic, you might use the useReducer hook in functional components.
+Or manage nested state objects in class components.

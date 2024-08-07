@@ -1,0 +1,35 @@
+1. What is the difference between var, let, and const in JavaScript?
+
+A. In JavaScript, var, let, and const are used to declare variables, but they have different characteristics:
+* var:
+Function-scoped: var is limited to the function in which it's declared.
+Can be re-declared and updated.
+Hoisted: var declarations are moved to the top of their scope, but not their initializations.
+
+* let:
+Block-scoped: let is limited to the block (e.g., inside a {}) in which it's declared.
+Cannot be re-declared within the same scope, but can be updated.
+Not hoisted to the top of their block (they are hoisted but remain uninitialized until their declaration is encountered).
+
+* const:
+Block-scoped: like let, const is limited to the block in which it's declared.
+Cannot be re-declared or updated; must be initialized at the time of declaration.
+Not hoisted to the top of their block (like let).
+Use var for legacy code or when you need function-scoped variables.
+Use let for block-scoped variables that you might need to update.
+Use const for block-scoped variables that should not change.
+
+1. Temporal Dead Zone (TDZ):
+Both let and const are subject to the Temporal Dead Zone, meaning you cannot access the variables before their declaration in the code. This helps prevent reference errors.
+
+2. Global Object Property:
+Variables declared with var in the global scope become properties of the global object (window in browsers). let and const do not do this.
+
+3. Best Practices:
+Prefer const by default unless you know the variable needs to be reassigned.
+Use let if reassignment is necessary.
+Avoid var to prevent scoping issues and accidental redeclarations.
+
+
+4. Constant Objects and Arrays:
+const declarations for objects and arrays do not make them immutable. You can still modify the contents.

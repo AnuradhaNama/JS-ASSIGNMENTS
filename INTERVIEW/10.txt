@@ -1,0 +1,48 @@
+10. How do you use React Hooks?
+
+A. React Hooks are functions that let you use state and other React features in functional components. 
+They allow you to "hook into" React state and lifecycle features from functional components,
+ making it easier to share logic between components.
+* Basic Hooks:
+1. useState
+2. useEffect
+3. useContext
+
+* Additional Hooks:
+1. useReducer
+2. useCallback
+3. useMemo
+4. useRef
+5. useImperativeHandle
+6. useLayoutEffect
+7. useDebugValue
+
+* Using Basic Hooks:
+1. useState:
+The useState hook allows you to add state to functional components.
+
+2. useEffect:
+The useEffect hook lets you perform side effects in functional components. 
+It serves the same purpose as lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
+
+3. useContext:
+The useContext hook allows you to access the context in functional components.
+
+* Using Additional Hooks:
+1. useReducer:
+The useReducer hook is an alternative to useState for more complex state logic.
+
+2. useCallback:
+The useCallback hook returns a memoized callback, useful when passing callbacks to optimized child components.
+   That rely on reference equality to prevent unnecessary renders.
+
+3. useMemo:
+The useMemo hook returns a memoized value, useful for optimizing expensive calculations.
+
+4. useRef:
+The useRef hook returns a mutable ref object whose .current property is initialized to the passed argument. 
+It can be used to store a reference to a DOM element or a mutable variable that persists across renders.
+
+* Custom Hooks:
+You can create custom hooks to encapsulate reusable logic. 
+A custom hook is a JavaScript function that starts with 'use' and can call other hooks.

@@ -1,0 +1,42 @@
+15. What is the difference between useState() and useReducer() in React?
+
+A. useState and useReducer are both hooks provided by React to manage state in functional components, but they serve different purposes and are suited to different use cases. 
+   Here’s a breakdown of their differences:
+
+* useState:
+* Purpose: useState is used to manage simple state in functional components.
+  It’s ideal for cases where state changes are straightforward and don’t involve complex logic.
+
+* Usage:
+Syntax: const [state, setState] = useState(initialState);
+State Management: You use the setState function to update the state. 
+This function can be passed a new state value or a function that returns the new state based on the previous state.
+
+* Best For: Simple state management where state updates are direct and do not involve complex logic or multiple state transitions.
+
+* useReducer:
+* Purpose: useReducer is used for more complex state logic, where state transitions depend on various actions and involve more intricate state updates. 
+  It’s similar to how reducers work in Redux but scoped to a single component.
+
+* Usage:
+Syntax: const [state, dispatch] = useReducer(reducer, initialState);
+Reducer Function: You define a reducer function that takes the current state and an action, and returns the new state based on the action type.
+ You use the dispatch function to send actions to the reducer.
+
+ * Best For: Complex state management with multiple actions or state transitions. 
+ It’s useful when you have state logic that is too complex for useState or when managing multiple related state values.
+
+ * Key Differences:
+
+1. Complexity:
+useState: Simpler and ideal for basic state updates.
+useReducer: Suitable for more complex state management involving multiple actions and more intricate state updates.
+
+2. State Updates:
+useState: State updates are handled directly through setState.
+useReducer: State updates are handled through the reducer function, which determines how the state should change based on the action type.
+
+3. When to Use:
+useState: When your state logic is straightforward and does not involve complex transitions.
+useReducer: When you need to handle complex state logic, multiple actions, or when state changes are dependent on various conditions.
+* useState is great for simple state management, while useReducer is better suited for complex state logic and scenarios where state changes are governed by multiple actions.

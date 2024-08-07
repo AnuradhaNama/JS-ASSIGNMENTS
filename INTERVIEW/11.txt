@@ -1,0 +1,26 @@
+11. What is the purpose of the useEffect() hook in React?
+
+A. The useEffect hook in React serves multiple purposes related to managing side effects in functional components. 
+Side effects are operations that affect something outside the scope of the function being executed, such as fetching data from an API, modifying the DOM, 
+setting up subscriptions or timers, and cleaning up after those operations.
+
+* Primary Purposes of useEffect:
+1. Data Fetching: Fetch data from an API when the component mounts or when specific dependencies change.
+2. Subscriptions: Set up subscriptions or listeners, such as WebSocket connections, and clean them up when the component unmounts.
+3. Manual DOM Manipulations: Perform DOM manipulations that cannot be handled through JSX alone.
+4. Timers: Set up intervals or timeouts and clean them up when the component unmounts.
+5. Logging: Log information or perform side effects for debugging purposes.
+
+* Basic Usage of useEffect:
+* The useEffect hook takes two arguments:
+A function that contains the side effect code.
+An optional array of dependencies that determines when the effect should be re-run.
+
+* Cleaning Up Effects:
+To prevent memory leaks and other issues, you should clean up effects when the component unmounts or before re-running the effect.
+ This is done by returning a cleanup function from the effect.
+
+ * Initialization: Use useEffect to run code after the component mounts, such as fetching data or setting up a subscription.
+ * Updating: Depend on specific state or props to re-run the effect when they change.
+ * Cleanup: Return a function to clean up resources when the component unmounts or before the effect re-runs, preventing memory leaks and other issues.
+> By leveraging 'useEffect', you can manage side effects in functional components, ensuring your React applications remain efficient and maintainable.
